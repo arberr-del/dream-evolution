@@ -1,0 +1,335 @@
+.ep-page {
+  padding-top: 60px;
+  background: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ── HERO ──────────────────────────────────────────────── */
+.ep-hero {
+  position: relative;
+  padding: 4rem 4rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ep-hero-img {
+  height: 260px;
+  overflow: hidden;
+  border-radius: 2px;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.ep-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ep-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  margin-bottom: 1.2rem;
+}
+
+.ep-hero-sub {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #444;
+  max-width: 420px;
+}
+
+/* ── SECTION WRAPPER ───────────────────────────────────── */
+.ep-section {
+  position: relative;
+  padding: 5rem 4rem;
+  background: var(--cream);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ep-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 8rem);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* ── FUTURE EVENTS LIST ────────────────────────────────── */
+.ep-future-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-future-card {
+  padding: 4rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ep-future-card:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ep-future-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.ep-future-img-wrap {
+  position: relative;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  height: 380px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+.ep-future-img-wrap img,
+.ep-future-img-wrap .img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ep-future-sidebar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 36px;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.ep-future-sidebar-title,
+.ep-future-sidebar-year {
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.ep-future-body {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ep-future-desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #333;
+}
+
+/* ── APPLY FORM ────────────────────────────────────────── */
+.ep-apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--black);
+  color: var(--white);
+  padding: 1.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.16);
+}
+
+.ep-apply-form .form-group {
+  margin-bottom: 0;
+}
+
+.ep-apply-form .form-group label {
+  color: #ccc;
+}
+
+.ep-apply-form .form-group input,
+.ep-apply-form .form-group textarea {
+  background: #111;
+  border-color: #333;
+  color: var(--white);
+}
+
+.ep-future-btn {
+  width: 100%;
+  align-self: stretch;
+  margin-top: 0;
+  
+}
+
+/* ── PAST EVENTS ───────────────────────────────────────── */
+.ep-past-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 2.5rem;
+}
+
+.ep-past-card:nth-child(4n+3),
+.ep-past-card:nth-child(4n+4) {
+  margin-top: 2rem;
+}
+
+.ep-past-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.ep-past-card:hover .ep-past-img-wrap img {
+  transform: scale(1.03);
+}
+
+.ep-past-img-wrap {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.ep-past-img-wrap img,
+.ep-past-img-wrap .img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.ep-past-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+}
+
+.ep-past-label-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ep-past-label-year {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.ep-past-desc {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #444;
+
+  /* Clamp text */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modal image for past events */
+.ep-past-modal-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.ep-past-modal-img img,
+.ep-past-modal-img .img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ep-hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .ep-hero-img {
+    height: 220px;
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  }
+
+  .ep-hero-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    text-align: center;
+  }
+
+  .ep-hero-sub {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ep-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .ep-section-title {
+    font-size: clamp(3rem, 16vw, 5rem);
+    margin-bottom: 2rem;
+  }
+
+  .ep-future-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ep-future-card {
+    padding: 2rem 0;
+  }
+
+  .ep-future-img-wrap {
+    height: 260px;
+  }
+
+  .ep-future-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ep-past-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ep-past-card:nth-child(4n+3),
+  .ep-past-card:nth-child(4n+4) {
+    margin-top: 0;
+  }
+
+  .ep-past-img-wrap {
+    height: 260px;
+  }
+}

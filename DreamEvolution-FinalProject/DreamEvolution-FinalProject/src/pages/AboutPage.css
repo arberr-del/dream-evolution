@@ -1,0 +1,286 @@
+.about-page {
+  padding-top: 30px;
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+/* ── HERO ──────────────────────────────────────────────── */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 1.5rem;
+  padding-top: 6rem;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-hero-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  min-height: 380px;
+}
+
+.about-hero-img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.about-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  filter: grayscale(15%);
+}
+
+/* Big number bottom-left over the image */
+.about-hero-number {
+  position: absolute;
+  bottom: -0.15em;
+  left: 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 18vw, 14rem);
+  line-height: 1;
+  color: var(--cream);
+  opacity: 0.92;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Large hero title */
+.about-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 12rem);
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  text-align: right;
+  padding: 0 2rem;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── QUOTE CARD ────────────────────────────────────────── */
+.about-quote-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding: 2rem 2.5rem;
+  max-width: 480px;
+  margin: 3rem auto 0;
+  position: relative;
+  left: 55%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about-quote-card p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #333;
+  font-style: italic;
+}
+
+.about-quote-card cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #888;
+  font-style: normal;
+}
+
+/* ── SECTIONS ──────────────────────────────────────────── */
+.about-section {
+  padding: 6rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section--01 {
+  background: var(--cream);
+  grid-template-columns: 1fr 280px;
+}
+
+.about-section--02 {
+  background: var(--cream);
+  grid-template-columns: 280px 1fr;
+}
+
+.about-section--01 .about-section-number {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.about-section--01 .about-dandelion {
+  margin-top: 0;
+  align-self: center;
+}
+
+.about-section-number {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 9rem);
+  line-height: 1;
+  color: var(--black);
+  text-align: right;
+  margin-bottom: -1rem;
+}
+
+.about-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.about-section-body p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.about-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-section-text--right {
+  text-align: right;
+}
+
+.about-section-body--centered {
+  text-align: left;
+}
+
+/* ── DANDELION SVG ─────────────────────────────────────── */
+.about-dandelion {
+  width: 220px;
+  height: 320px;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+.about-dandelion--right {
+  margin-top: 2rem;
+  align-self: center;
+}
+
+.about-dandelion--left {
+  align-self: center;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.2rem;
+  }
+
+  .about-hero-img-wrap {
+    height: 55vw;
+    min-height: 240px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-hero-title {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .about-hero-img-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-quote-card {
+    position: static;
+    margin: 2rem auto 0;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 480px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.2rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section--02 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section--02 .about-section-text {
+    order: 1;
+  }
+
+  .about-section--02 .about-dandelion {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .about-section-text,
+  .about-section-text--right {
+    width: 100%;
+    max-width: 740px;
+    text-align: center;
+  }
+
+  .about-divider {
+    margin: 0 auto 1.5rem;
+  }
+
+  .about-section-number,
+  .about-section--01 .about-section-number {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .about-section-body--centered {
+    text-align: center;
+  }
+
+  .about-dandelion {
+    width: 140px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}

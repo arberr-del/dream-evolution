@@ -1,0 +1,39 @@
+#apply {
+  padding: 6rem 3rem;
+  background: var(--black);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.apply-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.apply-left p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+@media (max-width: 768px) {
+  #apply {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.2rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .apply-left p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
